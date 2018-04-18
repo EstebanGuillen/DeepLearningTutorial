@@ -25,10 +25,10 @@ X = tf.placeholder(tf.float32, [None, 784])
 Y_ = tf.placeholder(tf.float32, [None, 10])
 
 # five layers and their number of neurons (tha last layer has 10 softmax neurons)
-L = 100
-M = 100
-N = 100
-O = 100
+L = 400
+M = 400
+N = 400
+O = 400
 
 
 W1 = tf.Variable(tf.truncated_normal([784, L], stddev=0.1))  # 784 = 28 * 28

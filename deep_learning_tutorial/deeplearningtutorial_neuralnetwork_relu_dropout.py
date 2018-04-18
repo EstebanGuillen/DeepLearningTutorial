@@ -20,24 +20,19 @@ learning_rate = 0.001
 training_epochs = 20
 batch_size = 100
 
-# input X: 28x28 grayscale images, the first dimension (None) will index the images in the mini-batch
-#X = tf.placeholder(tf.float32, [None, 28, 28, 1])
 X = tf.placeholder(tf.float32, [None, 784]) 
-# correct answers will go here
 Y_ = tf.placeholder(tf.float32, [None, 10])
 
 # Probability of keeping a node during dropout = 1.0 at test time (no dropout) and 0.75 at training time
 pkeep = tf.placeholder(tf.float32)
 
 # five layers and their number of neurons (tha last layer has 10 softmax neurons)
-L = 100
-M = 100
-N = 100
-O = 100
+L = 400
+M = 400
+N = 400
+O = 400
 
 
-# Weights initialised with small random values between -0.2 and +0.2
-# When using RELUs, make sure biases are initialised with small *positive* values for example 0.1 = tf.ones([K])/10
 W1 = tf.Variable(tf.truncated_normal([784, L], stddev=0.1))  # 784 = 28 * 28
 B1 = tf.Variable(tf.zeros([L]))
 W2 = tf.Variable(tf.truncated_normal([L, M], stddev=0.1))
