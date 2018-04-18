@@ -130,17 +130,3 @@ plt.xlabel('Iterations')
 plt.legend()
 plt.show()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
